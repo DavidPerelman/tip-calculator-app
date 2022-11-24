@@ -1,0 +1,22 @@
+.Layout {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #c5e4e7;
+  gap: 40px;
+}
+
+.SPLITTER {
+  width: 50px;
+  height: 30px;
+  color: #3d6666;
+}
+
+.container {
+  width: 50%;
+  height: 50%;
+  background-color: white;
+}
