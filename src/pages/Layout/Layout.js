@@ -2,6 +2,8 @@ import React from 'react';
 import './Layout.css';
 import SPLITTER from '../../asset/SPLITTER.png';
 import Container from '../../components/Container/Container';
+import CalculatorInputs from '../../containers/CalculatorInputs/CalculatorInputs';
+import CalculatorOutputs from '../../containers/CalculatorOutputs/CalculatorOutputs';
 
 const Layout = () => {
   return (
@@ -10,12 +12,8 @@ const Layout = () => {
       <div className='calculate-container'>
         <Container size='big' color='white'>
           <div className='calculation-container'>
-            <Container size='medium' color='white'>
-              Bill
-            </Container>
-            <Container size='medium' color='green'>
-              Tip Amount
-            </Container>
+            <CalculatorInputs />
+            <CalculatorOutputs />
           </div>
         </Container>
       </div>
