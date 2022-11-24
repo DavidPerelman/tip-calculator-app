@@ -4,7 +4,9 @@ import header from '../../asset/bill.png';
 import './CalculatorInputs.css';
 
 const CalculatorInputs = () => {
-  const [bill, setBill] = useState(0);
+  const [bill, setBill] = useState('');
+
+  console.log(bill);
 
   return (
     <div data-testid='CalculatorInputs'>
@@ -13,6 +15,7 @@ const CalculatorInputs = () => {
           <img src={header} className='bill-header' alt='bill-header' />
           <input
             type='text'
+            onChange={(e) => setBill(e.target.value)}
             data-testid='billInput'
             className='bill-input'
             value={bill}

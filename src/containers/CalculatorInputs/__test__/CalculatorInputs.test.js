@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import App from '../../../App';
 
 describe('CalculatorInputs component', () => {
@@ -17,7 +17,15 @@ describe('CalculatorInputs component', () => {
     render(<App />);
 
     const billInput = screen.getByTestId('billInput');
+    expect(billInput.value).toBe('');
+  });
 
-    expect(billInput.value).toBe('0');
+  test('on change the bill input the value should be 12345', () => {
+    render(<App />);
+
+    const billInput = screen.getByTestId('billInput');
+
+    fireEvent.change(billInput, { target: { value: '12345' } });
+    expect(billInput.value).toBe('12345');
   });
 });
