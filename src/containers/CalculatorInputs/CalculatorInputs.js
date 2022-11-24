@@ -3,11 +3,9 @@ import Container from '../../components/Container/Container';
 
 const CalculatorInputs = () => {
   return (
-    <>
-      <Container size='medium' color='white'>
-        Bill
-      </Container>
-    </>
+    <div data-testid='CalculatorInputs'>
+      <Container size='medium' color='white'></Container>
+    </div>
   );
 };
 

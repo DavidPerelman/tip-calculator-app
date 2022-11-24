@@ -5,9 +5,11 @@ describe('CalculatorOutputs component', () => {
   test('test if the conatainer is in the page and have corect className', async () => {
     render(<App />);
 
-    const greenContainer = screen.getByTestId('CalculatorOutputs');
+    const calculatorOutputsContainer = screen.getByTestId('CalculatorOutputs');
 
     expect(screen.getByTestId('CalculatorOutputs')).toBeInTheDocument();
-    expect(greenContainer.firstChild).toHaveClass('Container medium green');
+    expect(calculatorOutputsContainer.firstChild).toHaveClass(
+      'Container medium green'
+    );
   });
 });
