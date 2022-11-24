@@ -1,12 +1,12 @@
 import React from 'react';
 import './Layout.css';
-import SPLITTER from '../asset/SPLITTER.png';
-import Container from '../components/Container/Container';
+import SPLITTER from '../../asset/SPLITTER.png';
+import Container from '../../components/Container/Container';
 
 const Layout = () => {
   return (
     <div className='Layout'>
-      <img src={SPLITTER} className='SPLITTER' />
+      <img src={SPLITTER} className='SPLITTER' alt='SPLITTER' />
       <Container size='big' color='white' />
       {/* <div className='container'></div> */}
     </div>
