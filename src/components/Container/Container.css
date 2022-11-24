@@ -1,0 +1,14 @@
+.Container {
+  width: 50%;
+  height: 50%;
+  background-color: white;
+}
+
+.big {
+  width: 920px;
+  height: 481px;
+}
+
+.white {
+  background-color: white;
+}
