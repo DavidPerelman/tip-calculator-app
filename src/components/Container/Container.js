@@ -2,8 +2,11 @@ import React from 'react';
 import './Container.css';
 
 const Container = ({ size, color, children }) => {
-  console.log(size);
-  return <div className={`Container ${size} ${color}`}>{children}</div>;
+  return (
+    <div data-testid='container-test' className={`Container ${size} ${color}`}>
+      {children}
+    </div>
+  );
 };
 
 export default Container;

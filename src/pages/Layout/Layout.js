@@ -10,8 +10,12 @@ const Layout = () => {
       <div className='calculate-container'>
         <Container size='big' color='white'>
           <div className='calculation-container'>
-            <Container size='medium' color='white'></Container>
-            <Container size='medium' color='green'></Container>
+            <Container size='medium' color='white'>
+              Bill
+            </Container>
+            <Container size='medium' color='green'>
+              Tip Amount
+            </Container>
           </div>
         </Container>
       </div>
