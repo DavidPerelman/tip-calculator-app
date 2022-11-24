@@ -15,3 +15,14 @@
   color: #3d6666;
   top: 163px;
 }
+
+.main-container {
+}
+
+.calculation-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,5 +1,5 @@
 .Container {
-  box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+  /* box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735); */
   border-radius: 25px;
 }
 
@@ -8,6 +8,15 @@
   height: 481px;
 }
 
+.medium {
+  width: 413px;
+  height: 417px;
+}
+
 .white {
   background: #ffffff;
+}
+
+.green {
+  background: #00474b;
 }

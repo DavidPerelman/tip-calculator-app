@@ -7,8 +7,14 @@ const Layout = () => {
   return (
     <div className='Layout'>
       <img src={SPLITTER} className='SPLITTER' alt='SPLITTER' />
-      <Container size='big' color='white' />
-      {/* <div className='container'></div> */}
+      <div className='calculate-container'>
+        <Container size='big' color='white'>
+          <div className='calculation-container'>
+            <Container size='medium' color='white'></Container>
+            <Container size='medium' color='green'></Container>
+          </div>
+        </Container>
+      </div>
     </div>
   );
 };
