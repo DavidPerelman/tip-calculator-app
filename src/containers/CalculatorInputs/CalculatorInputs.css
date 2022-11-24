@@ -1,0 +1,19 @@
+.bill-input {
+  margin-top: 5px;
+  padding-right: 4.49%;
+  background: #f3f9fa;
+  border: 2px solid #26c2ae;
+  border-radius: 5px;
+  height: 48px;
+  width: 379px;
+  font-size: 24px;
+  height: 36px;
+  left: 72.03%;
+  right: 4.49%;
+  top: calc(50% - 36px / 2);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: right;
+  background: url('../../asset/$.png') no-repeat scroll 15px 11px;
+}

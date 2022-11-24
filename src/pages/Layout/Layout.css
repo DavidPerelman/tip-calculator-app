@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
 .Layout {
   width: 100vw;
   height: 100vh;
@@ -7,6 +9,7 @@
   align-items: center;
   background-color: #c5e4e7;
   gap: 40px;
+  font-family: 'Space Mono', monospace;
 }
 
 .SPLITTER {
@@ -25,4 +28,5 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 40px;
 }
