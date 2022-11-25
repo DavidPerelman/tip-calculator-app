@@ -22,7 +22,7 @@
   border: 2px solid #26c2ae;
 }
 
-.icon {
+.dollar-icon {
   height: 1.5rem;
   width: 1.5rem;
   padding: 4px;
@@ -31,6 +31,17 @@
   left: 2px;
   transform: translateY(-50%);
   background: url('../../asset/$.png') no-repeat scroll 15px 11px;
+}
+
+.person-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 4px;
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+  background: url('../../asset/person-icon.png') no-repeat scroll 15px 11px;
 }
 
 .wrapper {
