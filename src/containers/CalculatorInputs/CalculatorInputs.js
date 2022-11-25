@@ -13,13 +13,16 @@ const CalculatorInputs = () => {
       <Container size='medium' color='white'>
         <div id='bill-input'>
           <img src={header} className='bill-header' alt='bill-header' />
-          <input
-            type='text'
-            onChange={(e) => setBill(e.target.value)}
-            data-testid='billInput'
-            className='bill-input'
-            value={bill}
-          />
+          <div class='wrapper'>
+            <div class='icon'></div>
+            <input
+              type='text'
+              onChange={(e) => setBill(e.target.value)}
+              data-testid='billInput'
+              className='bill-input'
+              value={bill}
+            />
+          </div>
         </div>
       </Container>
     </div>
