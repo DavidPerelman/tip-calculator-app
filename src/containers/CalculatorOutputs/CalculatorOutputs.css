@@ -39,15 +39,16 @@
   font-size: 48px;
   line-height: 71px;
   letter-spacing: -1px;
-  padding-left: 5px;
+  /* padding-left: 5px; */
 }
 
 .tip-amount-output {
   /* padding-left: 50px;
   padding-top: 50px; */
-  padding: 45px 45px;
+  padding: 8% 8%;
   display: flex;
   flex-direction: row;
+  gap: 70px;
 }
 
 .tip-amount-text-output {
@@ -57,5 +58,5 @@
 .tip-amount-value-output {
   display: flex;
   flex-direction: row;
-  padding-left: 70px;
+  /* padding-left: 30px; */
 }

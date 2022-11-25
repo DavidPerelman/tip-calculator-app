@@ -28,6 +28,30 @@
   border: 2px solid #26c2ae;
 }
 
+.number-of-people-input {
+  margin-top: 5px;
+  padding-right: 4.49%;
+  background-color: #f3f9fa;
+  /* border: 2px #26c2ae; */
+  border: 2px solid #26c2ae;
+  border-radius: 5px;
+  height: 48px;
+  width: 379px;
+  font-size: 24px;
+  height: 36px;
+  left: 72.03%;
+  right: 4.49%;
+  top: calc(50% - 36px / 2);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: right;
+}
+
+.number-of-people-input:focus {
+  border: 2px solid #26c2ae;
+}
+
 .dollar-icon {
   height: 1.5rem;
   width: 1.5rem;

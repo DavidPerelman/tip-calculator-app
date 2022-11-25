@@ -17,6 +17,6 @@ describe('CalculatorOutputs component', () => {
     render(<App />);
 
     const tipAmountOutput = screen.getByTestId('tipAmountOutput');
-    expect(tipAmountOutput.innerHTML).toBe('$0');
+    expect(tipAmountOutput.innerHTML).toBe('$0.00');
   });
 });

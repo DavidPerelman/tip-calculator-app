@@ -4,9 +4,14 @@ import billHeader from '../../asset/bill.png';
 import numberOfPeopleIconHeader from '../../asset/number-of-people.png';
 import './CalculatorInputs.css';
 
-const CalculatorInputs = () => {
-  const [bill, setBill] = useState('');
-  const [numberOfPeople, setNumberOfPeople] = useState('');
+const CalculatorInputs = ({
+  bill,
+  setBill,
+  numberOfPeople,
+  setNumberOfPeople,
+}) => {
+  //   const [bill, setBill] = useState('');
+  //   const [numberOfPeople, setNumberOfPeople] = useState('');
 
   return (
     <div data-testid='CalculatorInputs'>
@@ -19,7 +24,14 @@ const CalculatorInputs = () => {
               <input
                 type='text'
                 placeholder='0'
-                onChange={(e) => setBill(e.target.value)}
+                onChange={(e) => {
+                  if (bill === NaN) {
+                    return setBill(0);
+                  } else {
+                    setBill(e.target.value);
+                    console.log(parseInt(bill));
+                  }
+                }}
                 data-testid='billInput'
                 className='bill-input'
                 value={bill}
@@ -40,7 +52,7 @@ const CalculatorInputs = () => {
                 placeholder='0'
                 onChange={(e) => setNumberOfPeople(e.target.value)}
                 data-testid='numberOfPeopleInput'
-                className='bill-input'
+                className='number-of-people-input'
                 value={numberOfPeople}
               />
             </div>
