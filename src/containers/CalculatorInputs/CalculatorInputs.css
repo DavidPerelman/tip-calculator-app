@@ -1,9 +1,15 @@
+.CalculatorInputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
 .bill-input {
   margin-top: 5px;
   padding-right: 4.49%;
   background-color: #f3f9fa;
-  border: 2px #26c2ae;
-  /* border: 2px solid #26c2ae; */
+  /* border: 2px #26c2ae; */
+  border: 2px solid #26c2ae;
   border-radius: 5px;
   height: 48px;
   width: 379px;

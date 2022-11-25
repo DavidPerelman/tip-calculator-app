@@ -11,35 +11,39 @@ const CalculatorInputs = () => {
   return (
     <div data-testid='CalculatorInputs'>
       <Container size='medium' color='white'>
-        <div id='bill-input'>
-          <img src={billHeader} className='bill-header' alt='bill-header' />
-          <div class='wrapper'>
-            <div class='dollar-icon'></div>
-            <input
-              type='text'
-              onChange={(e) => setBill(e.target.value)}
-              data-testid='billInput'
-              className='bill-input'
-              value={bill}
-            />
+        <div className='CalculatorInputs-container'>
+          <div>
+            <img src={billHeader} className='bill-header' alt='bill-header' />
+            <div class='wrapper'>
+              <div class='dollar-icon'></div>
+              <input
+                type='text'
+                placeholder='0'
+                onChange={(e) => setBill(e.target.value)}
+                data-testid='billInput'
+                className='bill-input'
+                value={bill}
+              />
+            </div>
           </div>
-        </div>
 
-        <div id='bill-input'>
-          <img
-            src={numberOfPeopleIconHeader}
-            className='number-of-people'
-            alt='number-of-people'
-          />
-          <div class='wrapper'>
-            <div class='person-icon'></div>
-            <input
-              type='text'
-              onChange={(e) => setNumberOfPeople(e.target.value)}
-              data-testid='billInput'
-              className='bill-input'
-              value={numberOfPeople}
+          <div>
+            <img
+              src={numberOfPeopleIconHeader}
+              className='number-of-people'
+              alt='number-of-people'
             />
+            <div class='wrapper'>
+              <div class='person-icon'></div>
+              <input
+                type='text'
+                placeholder='0'
+                onChange={(e) => setNumberOfPeople(e.target.value)}
+                data-testid='billInput'
+                className='bill-input'
+                value={numberOfPeople}
+              />
+            </div>
           </div>
         </div>
       </Container>
