@@ -14,8 +14,8 @@ const CalculatorInputs = () => {
         <div className='CalculatorInputs-container'>
           <div>
             <img src={billHeader} className='bill-header' alt='bill-header' />
-            <div class='wrapper'>
-              <div class='dollar-icon'></div>
+            <div className='wrapper'>
+              <div className='dollar-icon'></div>
               <input
                 type='text'
                 placeholder='0'
@@ -33,13 +33,13 @@ const CalculatorInputs = () => {
               className='number-of-people'
               alt='number-of-people'
             />
-            <div class='wrapper'>
-              <div class='person-icon'></div>
+            <div className='wrapper'>
+              <div className='person-icon'></div>
               <input
                 type='text'
                 placeholder='0'
                 onChange={(e) => setNumberOfPeople(e.target.value)}
-                data-testid='billInput'
+                data-testid='numberOfPeopleInput'
                 className='bill-input'
                 value={numberOfPeople}
               />

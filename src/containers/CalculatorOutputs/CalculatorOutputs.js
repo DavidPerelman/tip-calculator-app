@@ -13,7 +13,12 @@ const CalculatorOutputs = () => {
             <span className='text-13 text-gray-green'>/ person</span>
           </div>
           <div className='tip-amount-value-output'>
-            <span className='text-48 text-light-sea-green'>$4.27</span>
+            <span
+              data-testid='tipAmountOutput'
+              className='text-48 text-light-sea-green'
+            >
+              $0
+            </span>
           </div>
         </div>
       </Container>
