@@ -1,8 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import Container from '../../components/Container/Container';
 import './CalculatorOutputs.css';
 
-const CalculatorOutputs = ({ tipAmount, totalPayPerPerson }) => {
+const CalculatorOutputs = ({
+  bill,
+  numberOfPeople,
+  tipAmount,
+  totalPayPerPerson,
+}) => {
+  useEffect(() => {
+    if (bill === NaN && numberOfPeople === NaN) {
+      console.log(0);
+    } else {
+      console.log(numberOfPeople * bill);
+    }
+  }, []);
   return (
     <div data-testid='CalculatorOutputs'>
       <Container size='medium' color='green'>

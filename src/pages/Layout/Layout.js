@@ -16,8 +16,18 @@ const Layout = () => {
     if (bill === NaN) {
       return setBill(0);
     } else {
-      setBill(e.target.value);
+      setBill(parseInt(e.target.value));
       console.log(parseInt(bill));
+    }
+  };
+
+  const changeNumberOfPeopleInput = (e) => {
+    e.preventDefault();
+    if (numberOfPeople === NaN) {
+      return setNumberOfPeople(0);
+    } else {
+      setNumberOfPeople(parseInt(e.target.value));
+      console.log(parseInt(numberOfPeople));
     }
   };
 
@@ -33,6 +43,7 @@ const Layout = () => {
               numberOfPeople={numberOfPeople}
               setNumberOfPeople={setNumberOfPeople}
               changeBillInput={changeBillInput}
+              changeNumberOfPeopleInput={changeNumberOfPeopleInput}
             />
             <CalculatorOutputs
               tipAmount={tipAmount}

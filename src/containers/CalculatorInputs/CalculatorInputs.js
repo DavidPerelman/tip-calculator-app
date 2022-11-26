@@ -6,9 +6,8 @@ import './CalculatorInputs.css';
 
 const CalculatorInputs = ({
   bill,
-  setBill,
   numberOfPeople,
-  setNumberOfPeople,
+  changeNumberOfPeopleInput,
   changeBillInput,
 }) => {
   //   const [bill, setBill] = useState('');
@@ -44,7 +43,7 @@ const CalculatorInputs = ({
               <input
                 type='text'
                 placeholder='0'
-                onChange={(e) => setNumberOfPeople(e.target.value)}
+                onChange={changeNumberOfPeopleInput}
                 data-testid='numberOfPeopleInput'
                 className='number-of-people-input'
                 value={numberOfPeople}
