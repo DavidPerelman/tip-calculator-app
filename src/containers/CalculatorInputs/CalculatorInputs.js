@@ -27,7 +27,7 @@ const CalculatorInputs = ({
                 onChange={changeBillInput}
                 data-testid='billInput'
                 className='bill-input'
-                value={bill}
+                value={bill || ''}
               />
             </div>
           </div>
@@ -46,7 +46,7 @@ const CalculatorInputs = ({
                 onChange={changeNumberOfPeopleInput}
                 data-testid='numberOfPeopleInput'
                 className='number-of-people-input'
-                value={numberOfPeople}
+                value={numberOfPeople || ''}
               />
             </div>
           </div>

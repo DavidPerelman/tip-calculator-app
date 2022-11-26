@@ -8,13 +8,6 @@ const CalculatorOutputs = ({
   tipAmount,
   totalPayPerPerson,
 }) => {
-  useEffect(() => {
-    if (bill === NaN && numberOfPeople === NaN) {
-      console.log(0);
-    } else {
-      console.log(numberOfPeople * bill);
-    }
-  }, []);
   return (
     <div data-testid='CalculatorOutputs'>
       <Container size='medium' color='green'>
@@ -29,11 +22,11 @@ const CalculatorOutputs = ({
               data-testid='tipAmountOutput'
               className='text-48 text-light-sea-green'
             >
-              {/* {`${tipAmount.toLocaleString('en-US', {
+              {`${tipAmount.toLocaleString('en-US', {
                 style: 'currency',
                 currency: 'USD',
-              })}`} */}
-              ${tipAmount}
+              })}`}
+              {/* ${tipAmount} */}
             </span>
           </div>
         </div>

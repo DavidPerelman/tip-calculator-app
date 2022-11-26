@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Layout.css';
 import SPLITTER from '../../asset/SPLITTER.png';
 import Container from '../../components/Container/Container';
@@ -7,14 +7,18 @@ import CalculatorOutputs from '../../containers/CalculatorOutputs/CalculatorOutp
 
 const Layout = () => {
   const [bill, setBill] = useState('');
-  const [tipPercent, setTipPercent] = useState(0);
+  const [tipPercent, setTipPercent] = useState(0.15);
   const [numberOfPeople, setNumberOfPeople] = useState('');
   const [tipAmount, setTipAmount] = useState('0.00');
 
+  useEffect(() => {
+    setTipAmount((tipPercent * bill) / 5);
+  }, [bill, tipPercent, numberOfPeople]);
+
   const changeBillInput = (e) => {
     e.preventDefault();
-    if (bill === NaN) {
-      return setBill(0);
+    if (e.target.value === '') {
+      setBill(0);
     } else {
       setBill(parseInt(e.target.value));
       console.log(parseInt(bill));
@@ -23,8 +27,8 @@ const Layout = () => {
 
   const changeNumberOfPeopleInput = (e) => {
     e.preventDefault();
-    if (numberOfPeople === NaN) {
-      return setNumberOfPeople(0);
+    if (e.target.value === '') {
+      setNumberOfPeople(0);
     } else {
       setNumberOfPeople(parseInt(e.target.value));
       console.log(parseInt(numberOfPeople));
