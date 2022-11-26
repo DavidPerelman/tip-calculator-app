@@ -9,6 +9,7 @@ const CalculatorInputs = ({
   setBill,
   numberOfPeople,
   setNumberOfPeople,
+  changeBillInput,
 }) => {
   //   const [bill, setBill] = useState('');
   //   const [numberOfPeople, setNumberOfPeople] = useState('');
@@ -24,14 +25,7 @@ const CalculatorInputs = ({
               <input
                 type='text'
                 placeholder='0'
-                onChange={(e) => {
-                  if (bill === NaN) {
-                    return setBill(0);
-                  } else {
-                    setBill(e.target.value);
-                    console.log(parseInt(bill));
-                  }
-                }}
+                onChange={changeBillInput}
                 data-testid='billInput'
                 className='bill-input'
                 value={bill}

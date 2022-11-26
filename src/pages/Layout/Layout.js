@@ -11,6 +11,16 @@ const Layout = () => {
   const [numberOfPeople, setNumberOfPeople] = useState('');
   const [tipAmount, setTipAmount] = useState('0.00');
 
+  const changeBillInput = (e) => {
+    e.preventDefault();
+    if (bill === NaN) {
+      return setBill(0);
+    } else {
+      setBill(e.target.value);
+      console.log(parseInt(bill));
+    }
+  };
+
   return (
     <div className='Layout'>
       <img src={SPLITTER} className='SPLITTER' alt='SPLITTER' />
@@ -22,6 +32,7 @@ const Layout = () => {
               setBill={setBill}
               numberOfPeople={numberOfPeople}
               setNumberOfPeople={setNumberOfPeople}
+              changeBillInput={changeBillInput}
             />
             <CalculatorOutputs
               tipAmount={tipAmount}
