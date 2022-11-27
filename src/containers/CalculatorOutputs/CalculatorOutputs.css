@@ -60,3 +60,22 @@
   flex-direction: row;
   /* padding-left: 30px; */
 }
+
+.total-output {
+  /* padding-left: 50px;
+  padding-top: 50px; */
+  padding: 8% 8%;
+  display: flex;
+  flex-direction: row;
+  gap: 110px;
+}
+
+.total-text-output {
+  align-self: center;
+}
+
+.total-value-output {
+  display: flex;
+  flex-direction: row;
+  /* padding-left: 30px; */
+}

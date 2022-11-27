@@ -1,18 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Container from '../../components/Container/Container';
 import billHeader from '../../asset/bill.png';
 import numberOfPeopleIconHeader from '../../asset/number-of-people.png';
 import './CalculatorInputs.css';
 
-const CalculatorInputs = ({
-  bill,
-  numberOfPeople,
-  changeNumberOfPeopleInput,
-  changeBillInput,
-}) => {
-  //   const [bill, setBill] = useState('');
-  //   const [numberOfPeople, setNumberOfPeople] = useState('');
-
+const CalculatorInputs = ({ changeNumberOfPeopleInput, changeBillInput }) => {
   return (
     <div data-testid='CalculatorInputs'>
       <Container size='medium' color='white'>
@@ -22,12 +14,11 @@ const CalculatorInputs = ({
             <div className='wrapper'>
               <div className='dollar-icon'></div>
               <input
-                type='text'
+                type='number'
                 placeholder='0'
                 onChange={changeBillInput}
                 data-testid='billInput'
                 className='bill-input'
-                value={bill || ''}
               />
             </div>
           </div>
@@ -41,12 +32,11 @@ const CalculatorInputs = ({
             <div className='wrapper'>
               <div className='person-icon'></div>
               <input
-                type='text'
+                type='number'
                 placeholder='0'
                 onChange={changeNumberOfPeopleInput}
                 data-testid='numberOfPeopleInput'
                 className='number-of-people-input'
-                value={numberOfPeople || ''}
               />
             </div>
           </div>

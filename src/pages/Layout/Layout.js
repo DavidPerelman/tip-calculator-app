@@ -6,33 +6,38 @@ import CalculatorInputs from '../../containers/CalculatorInputs/CalculatorInputs
 import CalculatorOutputs from '../../containers/CalculatorOutputs/CalculatorOutputs';
 
 const Layout = () => {
-  const [bill, setBill] = useState('');
+  const [bill, setBill] = useState(0);
   const [tipPercent, setTipPercent] = useState(0.15);
-  const [numberOfPeople, setNumberOfPeople] = useState('');
-  const [tipAmount, setTipAmount] = useState('0.00');
+  const [totalTip, setTotalTip] = useState(0);
+  const [numberOfPeople, setNumberOfPeople] = useState(0);
+  const [totalTipPerPerson, setTotalTipPerPerson] = useState(0);
+  const [totalBillPerPerson, setTotalBillPerPerson] = useState(0);
+  const [error, setError] = useState('');
 
   useEffect(() => {
-    setTipAmount((tipPercent * bill) / 5);
-  }, [bill, tipPercent, numberOfPeople]);
+    if (bill === 0) {
+      return;
+    } else if (numberOfPeople < 1) {
+      console.log(`Can't be zero`);
+      // setTipPercent(0);
+      setTotalTipPerPerson(0);
+      setTotalBillPerPerson(0);
+      return setError(`Can't be zero`);
+    } else {
+      setTotalTipPerPerson((bill * tipPercent) / numberOfPeople);
+      setTotalBillPerPerson(bill / numberOfPeople + totalTipPerPerson);
+    }
+  }, [bill, tipPercent, totalTipPerPerson, numberOfPeople]);
 
   const changeBillInput = (e) => {
     e.preventDefault();
-    if (e.target.value === '') {
-      setBill(0);
-    } else {
-      setBill(parseInt(e.target.value));
-      console.log(parseInt(bill));
-    }
+    setBill(Number(e.target.value));
+    setTotalTip(Number(tipPercent * bill));
   };
 
   const changeNumberOfPeopleInput = (e) => {
     e.preventDefault();
-    if (e.target.value === '') {
-      setNumberOfPeople(0);
-    } else {
-      setNumberOfPeople(parseInt(e.target.value));
-      console.log(parseInt(numberOfPeople));
-    }
+    setNumberOfPeople(Number(e.target.value));
   };
 
   return (
@@ -50,8 +55,8 @@ const Layout = () => {
               changeNumberOfPeopleInput={changeNumberOfPeopleInput}
             />
             <CalculatorOutputs
-              tipAmount={tipAmount}
-              setTipAmount={setTipAmount}
+              totalTipPerPerson={totalTipPerPerson}
+              totalBillPerPerson={totalBillPerPerson}
             />
           </div>
         </Container>
