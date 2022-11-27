@@ -2,9 +2,14 @@ import React from 'react';
 import Container from '../../components/Container/Container';
 import billHeader from '../../asset/bill.png';
 import numberOfPeopleIconHeader from '../../asset/number-of-people.png';
+import numberOfPeopleIconError from '../../asset/error.png';
 import './CalculatorInputs.css';
 
-const CalculatorInputs = ({ changeNumberOfPeopleInput, changeBillInput }) => {
+const CalculatorInputs = ({
+  changeNumberOfPeopleInput,
+  changeBillInput,
+  error,
+}) => {
   return (
     <div data-testid='CalculatorInputs'>
       <Container size='medium' color='white'>
@@ -24,11 +29,22 @@ const CalculatorInputs = ({ changeNumberOfPeopleInput, changeBillInput }) => {
           </div>
 
           <div>
-            <img
-              src={numberOfPeopleIconHeader}
-              className='number-of-people'
-              alt='number-of-people'
-            />
+            <div className='number-of-people-headers'>
+              <img
+                src={numberOfPeopleIconHeader}
+                className='number-of-people'
+                alt='number-of-people'
+              />
+              {error ? (
+                <img
+                  src={numberOfPeopleIconError}
+                  className='number-of-people'
+                  alt='number-of-people'
+                />
+              ) : (
+                ''
+              )}
+            </div>
             <div className='wrapper'>
               <div className='person-icon'></div>
               <input

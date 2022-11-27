@@ -12,18 +12,18 @@ const Layout = () => {
   const [numberOfPeople, setNumberOfPeople] = useState(0);
   const [totalTipPerPerson, setTotalTipPerPerson] = useState(0);
   const [totalBillPerPerson, setTotalBillPerPerson] = useState(0);
-  const [error, setError] = useState('');
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     if (bill === 0) {
       return;
     } else if (numberOfPeople < 1) {
       console.log(`Can't be zero`);
-      // setTipPercent(0);
       setTotalTipPerPerson(0);
       setTotalBillPerPerson(0);
-      return setError(`Can't be zero`);
+      return setError(true);
     } else {
+      setError(false);
       setTotalTipPerPerson((bill * tipPercent) / numberOfPeople);
       setTotalBillPerPerson(bill / numberOfPeople + totalTipPerPerson);
     }
@@ -48,6 +48,7 @@ const Layout = () => {
           <div className='calculation-container'>
             <CalculatorInputs
               bill={bill}
+              error={error}
               setBill={setBill}
               numberOfPeople={numberOfPeople}
               setNumberOfPeople={setNumberOfPeople}

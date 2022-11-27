@@ -83,3 +83,9 @@ input::-webkit-inner-spin-button {
 .wrapper {
   position: relative;
 }
+
+.number-of-people-headers {
+  display: flex;
+  flex-direction: inherit;
+  gap: 120px;
+}
