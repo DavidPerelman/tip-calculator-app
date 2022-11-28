@@ -7,22 +7,56 @@ const TipPercentsButtons = ({
   setTipPercent,
   changeTipPercentInput,
 }) => {
+  const buttonClick = (e) => {
+    setTipPercent(Number(e.target.value) / 100);
+    console.log(e.target.value);
+  };
   return (
     <div className='TipPercentsButtons'>
-      <Button backgroundColor='fdfd' color='white' size='small'>
+      <Button
+        backgroundColor='fdfd'
+        color='white'
+        size='small'
+        value='4'
+        onClick={buttonClick}
+      >
         5%
       </Button>
-      <Button backgroundColor='fdfd' color='white' size='small'>
-        5%
+      <Button
+        backgroundColor='fdfd'
+        color='white'
+        size='small'
+        value='10'
+        onClick={buttonClick}
+      >
+        10%
       </Button>
-      <Button backgroundColor='fdfd' color='white' size='small'>
-        5%
+      <Button
+        backgroundColor='fdfd'
+        color='white'
+        size='small'
+        value='15'
+        onClick={buttonClick}
+      >
+        15%
       </Button>
-      <Button backgroundColor='fdfd' color='white' size='small'>
-        5%
+      <Button
+        backgroundColor='fdfd'
+        color='white'
+        size='small'
+        value='25'
+        onClick={buttonClick}
+      >
+        25%
       </Button>
-      <Button backgroundColor='fdfd' color='white' size='small'>
-        5%
+      <Button
+        backgroundColor='fdfd'
+        color='white'
+        size='small'
+        value='50'
+        onClick={buttonClick}
+      >
+        50%
       </Button>
       <input
         type='number'
