@@ -2,7 +2,11 @@ import React from 'react';
 import Button from '../../components/Button/Button';
 import './TipPercentsButtons.css';
 
-const TipPercentsButtons = ({ tipPercent, setTipPercent }) => {
+const TipPercentsButtons = ({
+  tipPercent,
+  setTipPercent,
+  changeTipPercentInput,
+}) => {
   return (
     <div className='TipPercentsButtons'>
       <Button backgroundColor='fdfd' color='white' size='small'>
@@ -22,8 +26,8 @@ const TipPercentsButtons = ({ tipPercent, setTipPercent }) => {
       </Button>
       <input
         type='number'
-        placeholder='0'
-        // onChange={changeBillInput}
+        placeholder='Custom'
+        onChange={changeTipPercentInput}
         data-testid='billInput'
         className='tip-percents-input'
       />

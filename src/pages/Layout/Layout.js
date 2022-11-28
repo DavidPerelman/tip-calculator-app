@@ -40,6 +40,12 @@ const Layout = () => {
     setNumberOfPeople(Number(e.target.value));
   };
 
+  const changeTipPercentInput = (e) => {
+    e.preventDefault();
+    setTipPercent(Number(e.target.value) / 100);
+    console.log(Number(e.target.value / 100));
+  };
+
   return (
     <div className='Layout'>
       <img src={SPLITTER} className='SPLITTER' alt='SPLITTER' />
@@ -55,6 +61,7 @@ const Layout = () => {
               numberOfPeople={numberOfPeople}
               setNumberOfPeople={setNumberOfPeople}
               changeBillInput={changeBillInput}
+              changeTipPercentInput={changeTipPercentInput}
               changeNumberOfPeopleInput={changeNumberOfPeopleInput}
             />
             <CalculatorOutputs

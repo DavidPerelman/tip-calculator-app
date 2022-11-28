@@ -8,6 +8,7 @@ import TipPercentsButtons from '../TipPercentsButtons/TipPercentsButtons';
 
 const CalculatorInputs = ({
   changeNumberOfPeopleInput,
+  changeTipPercentInput,
   changeBillInput,
   tipPercent,
   setTipPercent,
@@ -35,6 +36,7 @@ const CalculatorInputs = ({
             <TipPercentsButtons
               tipPercent={tipPercent}
               setTipPercent={setTipPercent}
+              changeTipPercentInput={changeTipPercentInput}
             />
           </div>
 
