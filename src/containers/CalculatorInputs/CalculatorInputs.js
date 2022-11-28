@@ -41,17 +41,8 @@ const CalculatorInputs = ({
           <div>
             <div className='number-of-people-headers'>
               <p className='number-of-people-header'>Number Of People</p>
-              {/* <img
-                src={numberOfPeopleIconHeader}
-                className='number-of-people'
-                alt='number-of-people'
-              /> */}
+
               {error ? (
-                // <img
-                //   src={numberOfPeopleIconError}
-                //   className='number-of-people'
-                //   alt='number-of-people'
-                // />
                 <p className='number-of-people-error'>Can't be zero</p>
               ) : (
                 ''

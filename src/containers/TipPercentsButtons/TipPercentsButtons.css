@@ -1,0 +1,26 @@
+.TipPercentsButtons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tip-percents-input {
+  width: 118px;
+  height: 48px;
+  margin: 10px;
+  box-sizing: border-box;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: #f3f9fa;
+  border: 2px solid #26c2ae;
+  border-radius: 5px;
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 35.54px;
+  color: #00474b;
+  direction: rtl;
+  padding-right: 10px;
+}
