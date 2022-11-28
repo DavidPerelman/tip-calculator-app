@@ -1,0 +1,23 @@
+.Button {
+  margin: 7px;
+}
+
+.small {
+  width: 117px;
+  height: 48px;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: 700;
+  border-left-width: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+}
+
+.fdfd {
+  background-color: #00474b;
+}
+
+.white {
+  color: #ffffff;
+}

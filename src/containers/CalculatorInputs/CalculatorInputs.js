@@ -4,10 +4,13 @@ import billHeader from '../../asset/bill.png';
 import numberOfPeopleIconHeader from '../../asset/number-of-people.png';
 import numberOfPeopleIconError from '../../asset/error.png';
 import './CalculatorInputs.css';
+import TipPercentsButtons from '../TipPercentsButtons/TipPercentsButtons';
 
 const CalculatorInputs = ({
   changeNumberOfPeopleInput,
   changeBillInput,
+  tipPercent,
+  setTipPercent,
   error,
 }) => {
   return (
@@ -27,6 +30,10 @@ const CalculatorInputs = ({
               />
             </div>
           </div>
+          <TipPercentsButtons
+            tipPercent={tipPercent}
+            setTipPercent={setTipPercent}
+          />
 
           <div>
             <div className='number-of-people-headers'>

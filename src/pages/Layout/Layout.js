@@ -4,6 +4,7 @@ import SPLITTER from '../../asset/SPLITTER.png';
 import Container from '../../components/Container/Container';
 import CalculatorInputs from '../../containers/CalculatorInputs/CalculatorInputs';
 import CalculatorOutputs from '../../containers/CalculatorOutputs/CalculatorOutputs';
+import TipPercentsButtons from '../../containers/TipPercentsButtons/TipPercentsButtons';
 
 const Layout = () => {
   const [bill, setBill] = useState(0);
@@ -18,7 +19,6 @@ const Layout = () => {
     if (bill === 0) {
       return;
     } else if (numberOfPeople < 1) {
-      console.log(`Can't be zero`);
       setTotalTipPerPerson(0);
       setTotalBillPerPerson(0);
       return setError(true);
@@ -50,6 +50,8 @@ const Layout = () => {
               bill={bill}
               error={error}
               setBill={setBill}
+              tipPercent={tipPercent}
+              setTipPercent={setTipPercent}
               numberOfPeople={numberOfPeople}
               setNumberOfPeople={setNumberOfPeople}
               changeBillInput={changeBillInput}
