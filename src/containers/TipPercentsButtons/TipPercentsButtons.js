@@ -12,11 +12,13 @@ const TipPercentsButtons = ({ setTipPercent, changeTipPercentInput }) => {
   }, []);
 
   const buttonClick = (e) => {
+    const tipPercentInput = document.getElementById('tip-percents-input');
+    console.log(tipPercentInput.value);
+    tipPercentInput.value = '';
     const buttons = document.getElementsByClassName('Button');
 
     Object.keys(buttons).forEach((key) => {
       if (Number(buttons[key].value) / 100 === Number(e.target.value) / 100) {
-        console.log(e.target);
         setTipPercent(Number(e.target.value) / 100);
         buttons[key].classList.remove('non-active-button');
         e.target.classList.add('active-button');
@@ -34,7 +36,6 @@ const TipPercentsButtons = ({ setTipPercent, changeTipPercentInput }) => {
         color='white'
         size='small'
         value='5'
-        // onClick={buttonClick}
       >
         5%
       </Button>
@@ -43,7 +44,6 @@ const TipPercentsButtons = ({ setTipPercent, changeTipPercentInput }) => {
         color='white'
         size='small'
         value='10'
-        // onClick={buttonClick}
       >
         10%
       </Button>
@@ -52,7 +52,6 @@ const TipPercentsButtons = ({ setTipPercent, changeTipPercentInput }) => {
         color='white'
         size='small'
         value='15'
-        // onClick={buttonClick}
       >
         15%
       </Button>
@@ -61,7 +60,6 @@ const TipPercentsButtons = ({ setTipPercent, changeTipPercentInput }) => {
         color='white'
         size='small'
         value='25'
-        // onClick={buttonClick}
       >
         25%
       </Button>
@@ -70,11 +68,11 @@ const TipPercentsButtons = ({ setTipPercent, changeTipPercentInput }) => {
         color='white'
         size='small'
         value='50'
-        // onClick={buttonClick}
       >
         50%
       </Button>
       <input
+        id='tip-percents-input'
         type='number'
         placeholder='Custom'
         onChange={changeTipPercentInput}
