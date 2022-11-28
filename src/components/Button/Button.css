@@ -1,8 +1,8 @@
 .Button {
-  margin: 7px;
 }
 
 .small {
+  margin: 10px;
   width: 117px;
   height: 48px;
   border-radius: 5px;

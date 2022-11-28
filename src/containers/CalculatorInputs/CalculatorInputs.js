@@ -18,7 +18,7 @@ const CalculatorInputs = ({
       <Container size='medium' color='white'>
         <div className='CalculatorInputs-container'>
           <div>
-            <img src={billHeader} className='bill-header' alt='bill-header' />
+            <p className='bill-header'>Bill</p>
             <div className='wrapper'>
               <div className='dollar-icon'></div>
               <input
@@ -30,24 +30,29 @@ const CalculatorInputs = ({
               />
             </div>
           </div>
-          <TipPercentsButtons
-            tipPercent={tipPercent}
-            setTipPercent={setTipPercent}
-          />
+          <div>
+            <p className='select-tip-header'>Select Tip %</p>
+            <TipPercentsButtons
+              tipPercent={tipPercent}
+              setTipPercent={setTipPercent}
+            />
+          </div>
 
           <div>
             <div className='number-of-people-headers'>
-              <img
+              <p className='number-of-people-header'>Number Of People</p>
+              {/* <img
                 src={numberOfPeopleIconHeader}
                 className='number-of-people'
                 alt='number-of-people'
-              />
+              /> */}
               {error ? (
-                <img
-                  src={numberOfPeopleIconError}
-                  className='number-of-people'
-                  alt='number-of-people'
-                />
+                // <img
+                //   src={numberOfPeopleIconError}
+                //   className='number-of-people'
+                //   alt='number-of-people'
+                // />
+                <p className='number-of-people-error'>Can't be zero</p>
               ) : (
                 ''
               )}

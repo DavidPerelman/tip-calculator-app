@@ -86,6 +86,65 @@ input::-webkit-inner-spin-button {
 
 .number-of-people-headers {
   display: flex;
+  height: 45px;
   flex-direction: inherit;
-  gap: 120px;
+  gap: 80px;
+}
+
+.select-tip-header {
+  margin: 10px;
+  height: 24px;
+  left: 0%;
+  right: 68.87%;
+  top: calc(50% - 24px / 2 - 64px);
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #5e7a7d;
+}
+
+.bill-header {
+  margin: 10px;
+  margin-bottom: 3px;
+  height: 24px;
+  left: 0%;
+  right: 89.45%;
+  top: calc(50% - 24px / 2 - 27px);
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #5e7a7d;
+}
+
+.number-of-people-header {
+  margin: 10px;
+  padding-top: 7px;
+  left: 0%;
+  right: 58.58%;
+  top: calc(50% - 24px / 2 - 27px);
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #5e7a7d;
+}
+
+.number-of-people-error {
+  width: 138px;
+  height: 24px;
+  left: 66.23%;
+  right: 0%;
+  top: calc(50% - 24px / 2 - 27px);
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+  color: #e17457;
 }
