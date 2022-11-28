@@ -1,4 +1,9 @@
-.Button {
+.active-button {
+  background-color: #9fe8df;
+}
+
+.non-active-button {
+  background-color: #00474b;
 }
 
 .small {
@@ -12,10 +17,6 @@
   border-top-width: 0px;
   border-bottom-width: 0px;
   border-right-width: 0px;
-}
-
-.fdfd {
-  background-color: #00474b;
 }
 
 .white {

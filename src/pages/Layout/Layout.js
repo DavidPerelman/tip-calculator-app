@@ -4,11 +4,10 @@ import SPLITTER from '../../asset/SPLITTER.png';
 import Container from '../../components/Container/Container';
 import CalculatorInputs from '../../containers/CalculatorInputs/CalculatorInputs';
 import CalculatorOutputs from '../../containers/CalculatorOutputs/CalculatorOutputs';
-import TipPercentsButtons from '../../containers/TipPercentsButtons/TipPercentsButtons';
 
 const Layout = () => {
   const [bill, setBill] = useState(0);
-  const [tipPercent, setTipPercent] = useState(0.15);
+  const [tipPercent, setTipPercent] = useState(0);
   const [totalTip, setTotalTip] = useState(0);
   const [numberOfPeople, setNumberOfPeople] = useState(0);
   const [totalTipPerPerson, setTotalTipPerPerson] = useState(0);
@@ -42,6 +41,14 @@ const Layout = () => {
 
   const changeTipPercentInput = (e) => {
     e.preventDefault();
+
+    const buttons = document.getElementsByClassName('Button');
+
+    Object.keys(buttons).forEach((key) => {
+      buttons[key].classList.add('non-active-button');
+      buttons[key].classList.remove('active-button');
+    });
+
     setTipPercent(Number(e.target.value) / 100);
     console.log(Number(e.target.value / 100));
   };
