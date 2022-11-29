@@ -56,29 +56,29 @@ const Layout = () => {
   return (
     <div className='Layout'>
       <img src={SPLITTER} className='SPLITTER' alt='SPLITTER' />
-      <div className='calculate-container'>
-        <Container size='big' color='white'>
-          <div className='calculation-container'>
-            <CalculatorInputs
-              bill={bill}
-              error={error}
-              setBill={setBill}
-              tipPercent={tipPercent}
-              setTipPercent={setTipPercent}
-              numberOfPeople={numberOfPeople}
-              setNumberOfPeople={setNumberOfPeople}
-              changeBillInput={changeBillInput}
-              changeTipPercentInput={changeTipPercentInput}
-              changeNumberOfPeopleInput={changeNumberOfPeopleInput}
-            />
-            <CalculatorOutputs
-              totalTipPerPerson={totalTipPerPerson}
-              totalBillPerPerson={totalBillPerPerson}
-            />
-          </div>
-        </Container>
+      {/* <div className='calculate-container'> */}
+      {/* <Container size='big' color='white' className='calculation-container'> */}
+      <div className='calculation-container'>
+        <CalculatorInputs
+          bill={bill}
+          error={error}
+          setBill={setBill}
+          tipPercent={tipPercent}
+          setTipPercent={setTipPercent}
+          numberOfPeople={numberOfPeople}
+          setNumberOfPeople={setNumberOfPeople}
+          changeBillInput={changeBillInput}
+          changeTipPercentInput={changeTipPercentInput}
+          changeNumberOfPeopleInput={changeNumberOfPeopleInput}
+        />
+        <CalculatorOutputs
+          totalTipPerPerson={totalTipPerPerson}
+          totalBillPerPerson={totalBillPerPerson}
+        />
       </div>
+      {/* </Container> */}
     </div>
+    // </div>
   );
 };
 

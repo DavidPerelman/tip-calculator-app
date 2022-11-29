@@ -16,9 +16,9 @@ const CalculatorInputs = ({
 }) => {
   return (
     <div data-testid='CalculatorInputs'>
-      <Container size='medium' color='white'>
+      <Container size='medium' color='none'>
         <div className='CalculatorInputs-container'>
-          <div>
+          <div className='bill-container'>
             <p className='bill-header'>Bill</p>
             <div className='wrapper'>
               <div className='dollar-icon'></div>
@@ -31,7 +31,7 @@ const CalculatorInputs = ({
               />
             </div>
           </div>
-          <div>
+          <div className='select-tip-container'>
             <p className='select-tip-header'>Select Tip %</p>
             <TipPercentsButtons
               tipPercent={tipPercent}

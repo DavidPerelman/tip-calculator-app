@@ -7,7 +7,7 @@ input::-webkit-inner-spin-button {
 .CalculatorInputs-container {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 
 .bill-input {
@@ -147,4 +147,29 @@ input::-webkit-inner-spin-button {
   line-height: 24px;
   text-align: right;
   color: #e17457;
+}
+
+@media only screen and (max-width: 600px) {
+  .CalculatorInputs-container {
+    width: 330px;
+    padding-left: 20px;
+  }
+
+  .bill-input {
+    width: 310px;
+  }
+
+  .number-of-people-input {
+    width: 310px;
+  }
+
+  .bill-container {
+    height: 78px;
+    width: 311px;
+  }
+
+  .select-tip-container {
+    height: 216px;
+    width: 311px;
+  }
 }

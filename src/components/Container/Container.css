@@ -20,3 +20,18 @@
 .green {
   background: #00474b;
 }
+
+@media only screen and (max-width: 600px) {
+  .big {
+    /* top: 509px;
+    width: 375px;
+    height: 789px; */
+    width: 375px;
+    height: 100vh;
+  }
+
+  .medium {
+    width: 365px;
+    height: 417px;
+  }
+}

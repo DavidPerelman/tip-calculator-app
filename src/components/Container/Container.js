@@ -1,9 +1,12 @@
 import React from 'react';
 import './Container.css';
 
-const Container = ({ size, color, children }) => {
+const Container = ({ className, size, color, children }) => {
   return (
-    <div data-testid='container-test' className={`Container ${size} ${color}`}>
+    <div
+      data-testid='container-test'
+      className={`Container ${className} ${size} ${color}`}
+    >
       {children}
     </div>
   );
