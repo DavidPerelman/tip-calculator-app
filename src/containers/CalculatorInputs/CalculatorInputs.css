@@ -119,8 +119,7 @@ input::-webkit-inner-spin-button {
 }
 
 .number-of-people-header {
-  margin: 10px;
-  padding-top: 7px;
+  margin-left: 10px;
   left: 0%;
   right: 58.58%;
   top: calc(50% - 24px / 2 - 27px);
@@ -148,21 +147,29 @@ input::-webkit-inner-spin-button {
 }
 
 @media only screen and (max-width: 600px) {
+  .number-of-people-header {
+    margin-left: 0px;
+  }
+
   .CalculatorInputs-container {
     width: 330px;
-    padding-left: 20px;
+    padding-left: 30px;
   }
 
   .bill-input {
-    width: 310px;
+    width: 90%;
   }
 
   .number-of-people-input {
-    width: 310px;
+    width: 90%;
   }
 
   .bill-container {
     height: 78px;
+    width: 311px;
+  }
+
+  .number-of-people-container {
     width: 311px;
   }
 

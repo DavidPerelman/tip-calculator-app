@@ -1,10 +1,11 @@
 import React from 'react';
+import Button from '../../components/Button/Button';
 import Container from '../../components/Container/Container';
 import './CalculatorOutputs.css';
 
 const CalculatorOutputs = ({ totalTipPerPerson, totalBillPerPerson }) => {
   return (
-    <Container size='medium' color='green'>
+    <Container size='medium' color='green' className='output'>
       <div className='tip-amount-output'>
         <div className='tip-amount-text-output'>
           <span className='text-16 text-white'>Tip Amount</span>
@@ -44,6 +45,9 @@ const CalculatorOutputs = ({ totalTipPerPerson, totalBillPerPerson }) => {
           </span>
         </div>
       </div>
+      <Button color='active-button' size='big' className='active-button'>
+        RESET
+      </Button>
     </Container>
   );
 };

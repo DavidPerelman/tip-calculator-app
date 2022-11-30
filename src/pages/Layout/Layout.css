@@ -35,7 +35,7 @@
 
 @media only screen and (max-width: 600px) {
   .Layout {
-    height: 100vh;
+    height: 80%;
   }
 
   .calculation-container {

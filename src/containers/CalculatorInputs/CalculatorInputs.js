@@ -13,7 +13,7 @@ const CalculatorInputs = ({
 }) => {
   return (
     <div data-testid='CalculatorInputs'>
-      <Container size='medium' color='none'>
+      <Container size='medium' color='none' className='input'>
         <div className='CalculatorInputs-container'>
           <div className='bill-container'>
             <p className='bill-header'>Bill</p>
@@ -37,7 +37,7 @@ const CalculatorInputs = ({
             />
           </div>
 
-          <div>
+          <div className='number-of-people-container'>
             <div className='number-of-people-headers'>
               <p className='number-of-people-header'>Number Of People</p>
 

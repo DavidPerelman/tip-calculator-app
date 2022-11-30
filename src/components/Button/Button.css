@@ -19,6 +19,29 @@
   border-right-width: 0px;
 }
 
+.big {
+  border: 0;
+  margin-top: 20px;
+  height: 48px;
+  width: 333px;
+  border-radius: 5px;
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #00474b;
+}
+
 .white {
   color: #ffffff;
+}
+
+@media only screen and (max-width: 600px) {
+  .big {
+    width: 280px;
+    margin-top: 15px;
+    margin-left: 20px;
+  }
 }
