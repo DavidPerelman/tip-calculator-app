@@ -170,4 +170,8 @@ input::-webkit-inner-spin-button {
     height: 216px;
     width: 311px;
   }
+
+  .number-of-people-headers {
+    gap: 0px;
+  }
 }
