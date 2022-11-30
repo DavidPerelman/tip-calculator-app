@@ -1,8 +1,5 @@
 import React from 'react';
 import Container from '../../components/Container/Container';
-import billHeader from '../../asset/bill.png';
-import numberOfPeopleIconHeader from '../../asset/number-of-people.png';
-import numberOfPeopleIconError from '../../asset/error.png';
 import './CalculatorInputs.css';
 import TipPercentsButtons from '../TipPercentsButtons/TipPercentsButtons';
 

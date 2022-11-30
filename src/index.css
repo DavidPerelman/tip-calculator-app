@@ -15,20 +15,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-/* @media only screen and (max-width: 600px) {
-  .calculation-container {
-    border-radius: 50px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-  }
-
-  .big {
-    width: 420px;
-    height: 481px;
-  }
-} */

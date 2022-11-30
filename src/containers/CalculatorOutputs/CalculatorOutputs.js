@@ -4,7 +4,6 @@ import './CalculatorOutputs.css';
 
 const CalculatorOutputs = ({ totalTipPerPerson, totalBillPerPerson }) => {
   return (
-    // <div data-testid='CalculatorOutputs' className='CalculatorOutputs'>
     <Container size='medium' color='green'>
       <div className='tip-amount-output'>
         <div className='tip-amount-text-output'>
@@ -46,7 +45,6 @@ const CalculatorOutputs = ({ totalTipPerPerson, totalBillPerPerson }) => {
         </div>
       </div>
     </Container>
-    // </div>
   );
 };
 
