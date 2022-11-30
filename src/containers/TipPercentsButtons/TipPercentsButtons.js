@@ -17,12 +17,12 @@ const TipPercentsButtons = ({ setTipPercent, changeTipPercentInput }) => {
     const buttons = document.getElementsByClassName('Button');
 
     Object.keys(buttons).forEach((key) => {
-      console.log(buttons[key].innerHTML);
       if (Number(buttons[key].value) / 100 === Number(e.target.value) / 100) {
         setTipPercent(Number(e.target.value) / 100);
         buttons[key].classList.remove('non-active-button');
         e.target.classList.add('active-button');
       } else if (buttons[key].innerHTML === 'RESET') {
+        e.target.classList.add('active-button');
       } else {
         buttons[key].classList.add('non-active-button');
         buttons[key].classList.remove('active-button');

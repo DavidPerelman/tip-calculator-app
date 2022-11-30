@@ -3,7 +3,23 @@ import Button from '../../components/Button/Button';
 import Container from '../../components/Container/Container';
 import './CalculatorOutputs.css';
 
-const CalculatorOutputs = ({ totalTipPerPerson, totalBillPerPerson }) => {
+const CalculatorOutputs = ({
+  totalTipPerPerson,
+  totalBillPerPerson,
+  setBill,
+  setNumberOfPeople,
+  setTipPercent,
+  setTotalBillPerPerson,
+}) => {
+  const resetButtonClick = () => {
+    setTotalBillPerPerson(0);
+    setBill(0);
+    setNumberOfPeople(0);
+    setTipPercent(0);
+
+    document.getElementsByClassName('number-of-people-input')[0].value = '';
+    document.getElementsByClassName('bill-input')[0].value = '';
+  };
   return (
     <Container size='medium' color='green' className='output'>
       <div className='total-output'>
@@ -46,7 +62,12 @@ const CalculatorOutputs = ({ totalTipPerPerson, totalBillPerPerson }) => {
         </div>
       </div>
 
-      <Button color='active-button' size='big' className='reset-button'>
+      <Button
+        color='active-button'
+        size='big'
+        className='reset-button'
+        onClick={resetButtonClick}
+      >
         RESET
       </Button>
     </Container>

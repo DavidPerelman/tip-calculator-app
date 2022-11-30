@@ -42,8 +42,13 @@ const Layout = () => {
     const buttons = document.getElementsByClassName('Button');
 
     Object.keys(buttons).forEach((key) => {
-      buttons[key].classList.add('non-active-button');
-      buttons[key].classList.remove('active-button');
+      if (buttons[key].innerHTML === 'RESET') {
+        buttons[key].classList.add('active-button');
+        buttons[key].classList.remove('non-active-button');
+      } else {
+        buttons[key].classList.add('non-active-button');
+        buttons[key].classList.remove('active-button');
+      }
     });
 
     setTipPercent(Number(e.target.value) / 100);
@@ -67,8 +72,12 @@ const Layout = () => {
           changeNumberOfPeopleInput={changeNumberOfPeopleInput}
         />
         <CalculatorOutputs
+          setBill={setBill}
+          setNumberOfPeople={setNumberOfPeople}
+          setTipPercent={setTipPercent}
           totalTipPerPerson={totalTipPerPerson}
           totalBillPerPerson={totalBillPerPerson}
+          setTotalBillPerPerson={setTotalBillPerPerson}
         />
       </div>
     </div>
