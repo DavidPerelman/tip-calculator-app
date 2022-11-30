@@ -50,9 +50,11 @@
 
 .tip-amount-text-output {
   align-self: center;
+  text-align: left;
 }
 
 .tip-amount-value-output {
+  margin-left: 5px;
   display: flex;
   flex-direction: row;
 }
@@ -90,12 +92,13 @@
     display: flex;
     flex-direction: row;
     justify-content: right;
-    padding-right: 20px;
+    padding-right: 25px;
   }
 
   .tip-amount-value-output {
+    margin-left: 0;
     justify-content: right;
-    padding-right: 20px;
+    padding-right: 30px;
   }
 
   .CalculatorOutputs-container {
@@ -104,17 +107,18 @@
 
   .tip-amount-output {
     padding: 0;
-    padding-top: 30px;
+    padding-top: 25px;
     padding-left: 20px;
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 70px;
     justify-content: center;
   }
 
   .total-output {
     padding: 0px;
     padding-left: 20px;
+    padding-right: 10px;
     display: flex;
     flex-direction: row;
     gap: 0px;
@@ -124,5 +128,9 @@
   .output {
     height: 280px;
     text-align: left;
+  }
+
+  .text-48 {
+    font-size: 34px;
   }
 }

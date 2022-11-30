@@ -171,6 +171,7 @@ input::-webkit-inner-spin-button {
 
   .number-of-people-container {
     width: 311px;
+    margin-top: 10px;
   }
 
   .select-tip-container {

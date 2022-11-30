@@ -45,7 +45,7 @@ const CalculatorOutputs = ({ totalTipPerPerson, totalBillPerPerson }) => {
           </span>
         </div>
       </div>
-      <Button color='active-button' size='big' className='active-button'>
+      <Button color='active-button' size='big' className='reset-button'>
         RESET
       </Button>
     </Container>
