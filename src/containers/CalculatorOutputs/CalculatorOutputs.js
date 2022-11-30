@@ -6,13 +6,13 @@ import './CalculatorOutputs.css';
 const CalculatorOutputs = ({ totalTipPerPerson, totalBillPerPerson }) => {
   return (
     <Container size='medium' color='green' className='output'>
-      <div className='tip-amount-output'>
+      <div className='total-output'>
         <div className='tip-amount-text-output'>
           <span className='text-16 text-white'>Tip Amount</span>
           <br />
           <span className='text-13 text-gray-green'>/ person</span>
         </div>
-        <div className='tip-amount-value-output'>
+        <div className='total-value-output'>
           <span
             data-testid='tipAmountOutput'
             className='text-48 text-light-sea-green'
@@ -27,13 +27,13 @@ const CalculatorOutputs = ({ totalTipPerPerson, totalBillPerPerson }) => {
 
       <br />
 
-      <div className='total-output'>
+      <div className='tip-amount-output'>
         <div className='total-text-output'>
           <span className='text-16 text-white'>Total</span>
           <br />
           <span className='text-13 text-gray-green'>/ person</span>
         </div>
-        <div className='total-value-output'>
+        <div className='tip-amount-value-output'>
           <span
             data-testid='tipAmountOutput'
             className='text-48 text-light-sea-green'
@@ -45,6 +45,7 @@ const CalculatorOutputs = ({ totalTipPerPerson, totalBillPerPerson }) => {
           </span>
         </div>
       </div>
+
       <Button color='active-button' size='big' className='reset-button'>
         RESET
       </Button>
