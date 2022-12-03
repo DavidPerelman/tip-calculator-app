@@ -51,7 +51,7 @@ const CalculatorOutputs = ({
         </div>
         <div className='tip-amount-value-output'>
           <span
-            data-testid='tipAmountOutput'
+            data-testid='totalOutput'
             className='text-48 text-light-sea-green'
           >
             {`${totalBillPerPerson.toLocaleString('en-US', {

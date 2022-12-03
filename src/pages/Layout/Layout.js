@@ -62,6 +62,7 @@ const Layout = () => {
         <CalculatorInputs
           bill={bill}
           error={error}
+          setError={setError}
           setBill={setBill}
           tipPercent={tipPercent}
           setTipPercent={setTipPercent}

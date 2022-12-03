@@ -9,7 +9,7 @@ describe('CalculatorInputs component', () => {
 
     expect(screen.getByTestId('CalculatorInputs')).toBeInTheDocument();
     expect(calculatorInputsContainer.firstChild).toHaveClass(
-      'Container medium white'
+      'Container medium none'
     );
   });
 

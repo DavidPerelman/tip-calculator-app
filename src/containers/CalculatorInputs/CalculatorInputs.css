@@ -82,6 +82,13 @@ input::-webkit-inner-spin-button {
   position: relative;
 }
 
+.bill-headers {
+  display: flex;
+  height: 45px;
+  flex-direction: inherit;
+  gap: 190px;
+}
+
 .number-of-people-headers {
   display: flex;
   height: 45px;
