@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from '../../../App';
 
@@ -100,6 +100,20 @@ describe('TipPercentsButtons', () => {
         if (button.value !== '50') {
           expect(button.className).toBe('Button small white non-active-button');
         }
+      }
+    });
+  });
+
+  test('should input handlers are called', async () => {
+    render(<App />);
+
+    const input = screen.getByTestId('tipPercentInput');
+    const buttons = screen.getAllByRole('button');
+    fireEvent.change(input, { target: { value: '123' } });
+
+    buttons.forEach((button) => {
+      if (button.className !== 'Button big active-button undefined') {
+        expect(button.className).toBe('Button small white non-active-button');
       }
     });
   });
