@@ -4,6 +4,7 @@ const Input = ({
   id,
   type,
   name,
+  label,
   placeholder,
   onChange,
   dataTestid,
@@ -13,6 +14,7 @@ const Input = ({
   return (
     <input
       id={id}
+      aria-label={label}
       type={type}
       name={name}
       placeholder={placeholder}

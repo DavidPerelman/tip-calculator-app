@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Button from '../Button';
 
-describe('TipPercentsButtons', () => {
+describe('Button', () => {
   test('renders correctly', async () => {
     render(<Button />);
     const button = screen.getAllByRole('button');
