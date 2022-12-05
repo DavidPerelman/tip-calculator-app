@@ -1,12 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import TipPercentsButtons from '../TipPercentsButtons';
 import App from '../../../App';
-
-// const clickHandler = jest.fn(() => {
-//   const tipPercentInput = screen.getByTestId('tipPercentInput');
-//   tipPercentInput.value = '';
-// });
 
 describe('TipPercentsButtons', () => {
   test('renders correctly', async () => {
@@ -19,52 +13,94 @@ describe('TipPercentsButtons', () => {
     render(<App />);
 
     const button = screen.getByTestId('button-5-percent');
+    const buttons = screen.getAllByRole('button');
     const tipPercentInput = screen.getByTestId('tipPercentInput');
     userEvent.click(button);
-    // expect(clickHandler).toHaveBeenCalledTimes(1);
     expect(tipPercentInput.value).toBe('');
+    expect(button.className).toBe('Button small white active-button');
+
+    buttons.forEach((button) => {
+      if (button.className !== 'Button big active-button undefined') {
+        if (button.value !== '5') {
+          expect(button.className).toBe('Button small white non-active-button');
+        }
+      }
+    });
   });
 
-  // test('should button-10-percent handlers are called', () => {
-  //   render(<TipPercentsButtons buttonClick={clickHandler} />);
+  test('should button-10-percent handlers are called', () => {
+    render(<App />);
 
-  //   const color = 'rgb(159, 232, 223)';
+    const button = screen.getByTestId('button-10-percent');
+    const buttons = screen.getAllByRole('button');
+    const tipPercentInput = screen.getByTestId('tipPercentInput');
+    userEvent.click(button);
+    expect(tipPercentInput.value).toBe('');
+    expect(button.className).toBe('Button small white active-button');
 
-  //   const button = screen.getByTestId('button-10-percent');
-  //   const tipPercentInput = screen.getByTestId('tipPercentInput');
-  //   userEvent.click(button);
-  //   console.log(button);
-  //   expect(clickHandler).toHaveBeenCalledTimes(1);
-  //   expect(tipPercentInput.value).toBe('');
-  // });
+    buttons.forEach((button) => {
+      if (button.className !== 'Button big active-button undefined') {
+        if (button.value !== '10') {
+          expect(button.className).toBe('Button small white non-active-button');
+        }
+      }
+    });
+  });
 
-  // test('should button-15-percent handlers are called', () => {
-  //   render(<TipPercentsButtons buttonClick={clickHandler} />);
+  test('should button-15-percent handlers are called', () => {
+    render(<App />);
 
-  //   const button = screen.getByTestId('button-15-percent');
-  //   const tipPercentInput = screen.getByTestId('tipPercentInput');
-  //   userEvent.click(button);
-  //   expect(clickHandler).toHaveBeenCalledTimes(1);
-  //   expect(tipPercentInput.value).toBe('');
-  // });
+    const button = screen.getByTestId('button-15-percent');
+    const buttons = screen.getAllByRole('button');
+    const tipPercentInput = screen.getByTestId('tipPercentInput');
+    userEvent.click(button);
+    expect(tipPercentInput.value).toBe('');
+    expect(button.className).toBe('Button small white active-button');
 
-  // test('should button-25-percent handlers are called', () => {
-  //   render(<TipPercentsButtons buttonClick={clickHandler} />);
+    buttons.forEach((button) => {
+      if (button.className !== 'Button big active-button undefined') {
+        if (button.value !== '15') {
+          expect(button.className).toBe('Button small white non-active-button');
+        }
+      }
+    });
+  });
 
-  //   const button = screen.getByTestId('button-25-percent');
-  //   const tipPercentInput = screen.getByTestId('tipPercentInput');
-  //   userEvent.click(button);
-  //   expect(clickHandler).toHaveBeenCalledTimes(1);
-  //   expect(tipPercentInput.value).toBe('');
-  // });
+  test('should button-25-percent handlers are called', () => {
+    render(<App />);
 
-  // test('should button-50-percent handlers are called', async () => {
-  //   render(<TipPercentsButtons buttonClick={clickHandler} />);
+    const button = screen.getByTestId('button-25-percent');
+    const buttons = screen.getAllByRole('button');
+    const tipPercentInput = screen.getByTestId('tipPercentInput');
+    userEvent.click(button);
+    expect(tipPercentInput.value).toBe('');
+    expect(button.className).toBe('Button small white active-button');
 
-  //   const button = screen.getByTestId('button-50-percent');
-  //   const tipPercentInput = screen.getByTestId('tipPercentInput');
-  //   userEvent.click(button);
-  //   expect(clickHandler).toHaveBeenCalledTimes(1);
-  //   expect(tipPercentInput.value).toBe('');
-  // });
+    buttons.forEach((button) => {
+      if (button.className !== 'Button big active-button undefined') {
+        if (button.value !== '25') {
+          expect(button.className).toBe('Button small white non-active-button');
+        }
+      }
+    });
+  });
+
+  test('should button-50-percent handlers are called', async () => {
+    render(<App />);
+
+    const button = screen.getByTestId('button-50-percent');
+    const buttons = screen.getAllByRole('button');
+    const tipPercentInput = screen.getByTestId('tipPercentInput');
+    userEvent.click(button);
+    expect(tipPercentInput.value).toBe('');
+    expect(button.className).toBe('Button small white active-button');
+
+    buttons.forEach((button) => {
+      if (button.className !== 'Button big active-button undefined') {
+        if (button.value !== '50') {
+          expect(button.className).toBe('Button small white non-active-button');
+        }
+      }
+    });
+  });
 });
