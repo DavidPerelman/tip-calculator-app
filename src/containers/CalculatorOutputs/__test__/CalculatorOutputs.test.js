@@ -18,4 +18,11 @@ describe('CalculatorOutputs component', () => {
     const tipAmountOutput = screen.getByTestId('tipAmountOutput');
     expect(tipAmountOutput.innerHTML).toBe('$0.00');
   });
+
+  test('the total output value should be 0', () => {
+    render(<App />);
+
+    const tipAmountOutput = screen.getByTestId('totalOutput');
+    expect(tipAmountOutput.innerHTML).toBe('$0.00');
+  });
 });
