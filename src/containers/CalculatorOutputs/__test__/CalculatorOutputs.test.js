@@ -2,15 +2,14 @@ import { render, screen } from '@testing-library/react';
 import App from '../../../App';
 
 describe('CalculatorOutputs component', () => {
-  test('test if the conatainer is in the page and have corect className', () => {
+  test('renders correctly', () => {
     render(<App />);
 
-    // const calculatorOutputsContainer = screen.getByTestId('CalculatorOutputs');
+    const tipAmountSpan = screen.getByText(/tip amount/i);
+    const totalSpan = screen.getByText(/total/i);
 
-    // expect(screen.getByTestId('CalculatorOutputs')).toBeInTheDocument();
-    // expect(calculatorOutputsContainer.firstChild).toHaveClass(
-    //   'Container medium green'
-    // );
+    expect(tipAmountSpan).toBeInTheDocument();
+    expect(totalSpan).toBeInTheDocument();
   });
 
   test('the tip amount output value should be 0', () => {
