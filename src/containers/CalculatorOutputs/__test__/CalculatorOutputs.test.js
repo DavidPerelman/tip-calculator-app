@@ -25,4 +25,13 @@ describe('CalculatorOutputs component', () => {
     const tipAmountOutput = screen.getByTestId('totalOutput');
     expect(tipAmountOutput.innerHTML).toBe('$0.00');
   });
+
+  test('the RESET button renders correctly', () => {
+    render(<App />);
+
+    const button = screen.getByTestId('resetButton');
+    const buttonText = screen.getByText(/reset/i);
+    expect(button).toBeInTheDocument();
+    expect(buttonText).toBeInTheDocument();
+  });
 });

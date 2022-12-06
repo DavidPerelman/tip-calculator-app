@@ -63,6 +63,7 @@ const CalculatorOutputs = ({
       </div>
 
       <Button
+        testId='resetButton'
         color='active-button'
         size='big'
         className='reset-button'
