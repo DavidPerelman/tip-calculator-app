@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Container from '../../components/Container/Container';
 import './CalculatorInputs.css';
 import TipPercentsButtons from '../TipPercentsButtons/TipPercentsButtons';
+import Input from '../../components/Input/Input';
 
 const CalculatorInputs = ({
   numberOfPeople,
@@ -13,27 +14,6 @@ const CalculatorInputs = ({
   error,
   setError,
 }) => {
-  // const buttonClick = (e) => {
-  //   setTipPercent(Number(e.target.value) / 100);
-  //   const tipPercentInput = document.getElementById('tip-percents-input');
-  //   tipPercentInput.value = '';
-
-  //   const buttons = document.getElementsByClassName('Button');
-
-  //   Object.keys(buttons).forEach((key) => {
-  //     if (Number(buttons[key].value) / 100 === Number(e.target.value) / 100) {
-  //       setTipPercent(Number(e.target.value) / 100);
-  //       buttons[key].classList.remove('non-active-button');
-  //       e.target.classList.add('active-button');
-  //     } else if (buttons[key].innerHTML === 'RESET') {
-  //       e.target.classList.add('active-button');
-  //     } else {
-  //       buttons[key].classList.add('non-active-button');
-  //       buttons[key].classList.remove('active-button');
-  //     }
-  //   });
-  // };
-
   return (
     <div data-testid='CalculatorInputs'>
       <Container size='medium' color='none' className='input'>
@@ -51,11 +31,12 @@ const CalculatorInputs = ({
 
             <div className='wrapper'>
               <div className='dollar-icon'></div>
-              <input
+              <Input
                 type='number'
+                id='bill-input'
                 placeholder='0'
                 onChange={changeBillInput}
-                data-testid='billInput'
+                dataTestid='billInput'
                 className='bill-input'
               />
             </div>
@@ -84,11 +65,12 @@ const CalculatorInputs = ({
             </div>
             <div className='wrapper'>
               <div className='person-icon'></div>
-              <input
+              <Input
                 type='number'
+                id='number-of-people-input'
                 placeholder='0'
                 onChange={changeNumberOfPeopleInput}
-                data-testid='numberOfPeopleInput'
+                dataTestid='numberOfPeopleInput'
                 className='number-of-people-input'
               />
             </div>
